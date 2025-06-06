@@ -1,0 +1,23 @@
+
+<!-- templates/create_task.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Criar Tarefa</title>
+</head>
+<body>
+    <h1>Criar Nova Tarefa</h1>
+
+    <!-- Sempre inclua isso para segurança -->
+    <form method="post">
+        {% csrf_token %}
+        
+        <!-- Renderiza o formulário inteiro -->
+        {{ form.as_p }}
+
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
